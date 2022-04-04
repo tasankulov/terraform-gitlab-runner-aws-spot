@@ -15,7 +15,7 @@ locals {
 
 module "default_label" {
   source  = "cloudposse/label/null"
-  version = "0.25.0"
+  version = "0.29.0"
 
   attributes = var.attributes
   delimiter  = var.delimiter
