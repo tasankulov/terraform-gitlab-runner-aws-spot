@@ -6,7 +6,7 @@ module "s3_cache_bucket" {
   enabled = var.enable_s3_cache
 
   source  = "cloudposse/s3-bucket/aws"
-  version = "0.33.0"
+  version = "0.49.0"
 
   context    = module.default_label.context
   attributes = compact(concat(var.attributes, ["cache"]))
