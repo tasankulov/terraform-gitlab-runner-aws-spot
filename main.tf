@@ -15,7 +15,7 @@ locals {
 
 module "default_label" {
   source  = "cloudposse/label/null"
-  version = "0.29.0"
+  version = "0.25.0"
 
   attributes = var.attributes
   delimiter  = var.delimiter
@@ -29,7 +29,7 @@ module "auth_token_ssm_param_label" {
   enabled = var.authentication_token_ssm_param != null ? false : true
 
   source  = "cloudposse/label/null"
-  version = "0.29.0"
+  version = "0.25.0"
 
   context    = module.default_label.context
   attributes = compact(concat(var.attributes, ["auth_token"]))
