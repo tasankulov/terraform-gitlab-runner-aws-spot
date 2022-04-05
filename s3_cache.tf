@@ -15,10 +15,7 @@ module "s3_cache_bucket" {
   versioning_enabled = false
   force_destroy      = true
 
-  enable_glacier_transition = false
-  expiration_days           = var.s3_cache_expiration
-  standard_transition_days  = var.s3_cache_infrequent_access_transition
-  lifecycle_rule_enabled    = true
+  lifecycle_rules    = var.lifecycle_rules
 }
 
 #############################################################
