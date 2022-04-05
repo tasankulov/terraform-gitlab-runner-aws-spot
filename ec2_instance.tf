@@ -49,7 +49,7 @@ module "runner_label" {
 
 module "manager_instance" {
   source  = "cloudposse/ec2-instance/aws"
-  version = "0.30.4"
+  version = "0.42.0"
 
   attributes = compact(concat(var.attributes, ["manager"]))
   delimiter  = var.delimiter
